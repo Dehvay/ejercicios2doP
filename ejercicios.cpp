@@ -2,17 +2,18 @@
 
 int main()
 {
-    int edadA;
+    int Uent, i;
 
-    printf("Cual es tu edad actual?: ");
-    scanf_s("%i", &edadA);
+    printf("Indique un numero entero: ");
+    scanf_s("%i", &Uent);
 
-    for (int i = 1; i <= edadA; i++)
+    for (i = 1; i <= Uent; i++)
     {
-        printf("%i\n", i);
+        if (!(i % 2 == 0))
+        {
+            printf("%i,", i);
+        }
     }
-
-    printf("Estos son los años que has cumplido");
 
     return 0;
 }
