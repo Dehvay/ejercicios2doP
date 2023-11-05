@@ -2,18 +2,33 @@
 
 int main()
 {
-    int numE;
-    int i;
+    int a, b, c;
 
-    printf("Indique un numero entero: ");
-    scanf_s("%i", &numE);
+    printf("Ingrese el numero: ");
+    scanf_s("%i", &a);
+    printf("Ingrese el numero: ");
+    scanf_s("%i", &b);
+    printf("Ingrese el numero: ");
+    scanf_s("%i", &c);
 
-    for (i = numE; i > 0; i--)
+    if (a > b && a > c)
     {
-        printf("%i,", i);
+        printf("%i es el numero mayor", a);
     }
-
-    printf("%i", i);
+    else
+    {
+        if (b > a && b > c)
+        {
+            printf("%i es el numero mayor", b);
+        }
+        else
+        {
+            if (c > a && c > b)
+            {
+                printf("%i es el numero mayor", c);
+            }
+        }
+    }
 
     return 0;
 }
