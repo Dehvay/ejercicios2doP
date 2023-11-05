@@ -2,15 +2,17 @@
 
 int main()
 {
-    char Upalabra[20];
+    int edadA;
 
-    printf("Ingrese una palabra: ");
-    scanf_s("%s", Upalabra, 20);
+    printf("Cual es tu edad actual?: ");
+    scanf_s("%i", &edadA);
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 1; i <= edadA; i++)
     {
-        printf("%s\n", Upalabra);
+        printf("%i\n", i);
     }
+
+    printf("Estos son los años que has cumplido");
 
     return 0;
 }
