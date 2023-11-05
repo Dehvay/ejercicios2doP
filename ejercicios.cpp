@@ -2,30 +2,65 @@
 
 int main()
 {
-    int a, b, c;
+    int edad, mes;
+    float imp, imp2, desc;
 
-    printf("Ingrese el numero: ");
-    scanf_s("%i", &a);
-    printf("Ingrese el numero: ");
-    scanf_s("%i", &b);
-    printf("Ingrese el numero: ");
-    scanf_s("%i", &c);
+    printf("Edad del contribuyente: ");
+    scanf_s("%i", &edad);
+    printf("Monto del impuesto: ");
+    scanf_s("%f", &imp);
+    printf("Mes de pago: ");
+    scanf_s("%i", &mes);
 
-    if (a > b && a > c)
+    if (edad > 60)
     {
-        printf("%i es el numero mayor", a);
-    }
-    else
-    {
-        if (b > a && b > c)
+        desc = 0.25;
+
+        if (mes == 1)
         {
-            printf("%i es el numero mayor", b);
+            desc += 0.20;
+            printf("Impuesto: %.2f\n", imp);
+            desc = imp * desc;
+            printf("Descuento: %.2f\n", desc);
+            imp2 = imp - desc;
+            printf("Impuesto a pagar %.2f\n", imp2);
         }
         else
         {
-            if (c > a && c > b)
+            if (mes == 2)
             {
-                printf("%i es el numero mayor", c);
+                desc += 0.10;
+                printf("Impuesto: %.2f\n", imp);
+                desc = imp * desc;
+                printf("Descuento: %.2f\n", desc);
+                imp2 = imp - desc;
+                printf("Impuesto a pagar %.2f\n", imp2);
+            }
+        }
+    }
+    else
+    {
+        if (mes == 1)
+        {
+            desc = 0;
+            desc += 0.20;
+            printf("Impuesto: %.2f\n", imp);
+            desc = imp * desc;
+            printf("Descuento: %.2f\n", desc);
+            imp2 = imp - desc;
+            printf("Impuesto a pagar %.2f\n", imp2);
+        }
+        else
+        {
+            if (mes == 2)
+            {
+                desc = 0;
+                desc += 0.10;
+                printf("Impuesto: %.2f\n", imp);
+                desc = imp * desc;
+                printf("Descuento: %.2f\n", desc);
+                imp2 = imp - desc;
+                printf("Impuesto a pagar %.2f\n", imp2);
             }
         }
     }
