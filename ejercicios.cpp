@@ -2,18 +2,18 @@
 
 int main()
 {
-    int Uent, i;
+    int numE;
+    int i;
 
     printf("Indique un numero entero: ");
-    scanf_s("%i", &Uent);
+    scanf_s("%i", &numE);
 
-    for (i = 1; i <= Uent; i++)
+    for (i = numE; i > 0; i--)
     {
-        if (!(i % 2 == 0))
-        {
-            printf("%i,", i);
-        }
+        printf("%i,", i);
     }
+
+    printf("%i", i);
 
     return 0;
 }
