@@ -7,19 +7,21 @@ int main()
     int cont;
     int let = 0;
 
-    printf("Introduce una frase: ");
-    scanf_s("%s", frase, 30);
+    printf("Introduzca una frase: ");
+    gets_s(frase, 30);
 
     for (cont = 0; frase[cont]; cont++)
     {
-        let++;
+        if (frase[cont] == ' ')
+        {
+        }
+        else
+        {
+            let++;
+        }
     }
 
-    printf("Su frase tiene %i letras\n", let);
-
-    let = strlen(frase);
-
-    printf("Su frase tiene %i letras", let);
+    printf("la frase tiene %i letras\n", let);
 
     return 0;
 }
