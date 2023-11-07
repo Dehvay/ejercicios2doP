@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int main()
 {
@@ -10,18 +11,27 @@ int main()
     printf("Introduzca una frase: ");
     gets_s(frase, 30);
 
-    for (cont = 0; frase[cont]; cont++)
+    for (cont = 0; cont < frase[cont]; cont++)
     {
-        if (frase[cont] == ' ')
+        if (frase[cont] == frase[0])
         {
+            frase[cont] = toupper(frase[cont]);
         }
         else
         {
-            let++;
+            frase[cont] = tolower(frase[cont]);
         }
     }
 
-    printf("la frase tiene %i letras\n", let);
+    if (frase[cont] == '.')
+    {
+    }
+    else
+    {
+        frase[cont] = '.';
+    }
+
+    printf("%s\n", frase);
 
     return 0;
 }
