@@ -1,69 +1,25 @@
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
-    int edad, mes;
-    float imp, imp2, desc;
+    char frase[30];
+    int cont;
+    int let = 0;
 
-    printf("Edad del contribuyente: ");
-    scanf_s("%i", &edad);
-    printf("Monto del impuesto: ");
-    scanf_s("%f", &imp);
-    printf("Mes de pago: ");
-    scanf_s("%i", &mes);
+    printf("Introduce una frase: ");
+    scanf_s("%s", frase, 30);
 
-    if (edad > 60)
+    for (cont = 0; frase[cont]; cont++)
     {
-        desc = 0.25;
+        let++;
+    }
 
-        if (mes == 1)
-        {
-            desc += 0.20;
-            printf("Impuesto: %.2f\n", imp);
-            desc = imp * desc;
-            printf("Descuento: %.2f\n", desc);
-            imp2 = imp - desc;
-            printf("Impuesto a pagar %.2f\n", imp2);
-        }
-        else
-        {
-            if (mes == 2)
-            {
-                desc += 0.10;
-                printf("Impuesto: %.2f\n", imp);
-                desc = imp * desc;
-                printf("Descuento: %.2f\n", desc);
-                imp2 = imp - desc;
-                printf("Impuesto a pagar %.2f\n", imp2);
-            }
-        }
-    }
-    else
-    {
-        if (mes == 1)
-        {
-            desc = 0;
-            desc += 0.20;
-            printf("Impuesto: %.2f\n", imp);
-            desc = imp * desc;
-            printf("Descuento: %.2f\n", desc);
-            imp2 = imp - desc;
-            printf("Impuesto a pagar %.2f\n", imp2);
-        }
-        else
-        {
-            if (mes == 2)
-            {
-                desc = 0;
-                desc += 0.10;
-                printf("Impuesto: %.2f\n", imp);
-                desc = imp * desc;
-                printf("Descuento: %.2f\n", desc);
-                imp2 = imp - desc;
-                printf("Impuesto a pagar %.2f\n", imp2);
-            }
-        }
-    }
+    printf("Su frase tiene %i letras\n", let);
+
+    let = strlen(frase);
+
+    printf("Su frase tiene %i letras", let);
 
     return 0;
 }
